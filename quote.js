@@ -221,21 +221,21 @@ buildingType_select.addEventListener("change", function () {
         });
     }
 });
-document.getElementById("building-type").addEventListener("change", function() {
-  let type = this.value; // residential, commercial, industrial
-  let headers = document.querySelectorAll(".step-header");
+document.addEventListener("DOMContentLoaded", function() {
+  const buildingSelect = document.getElementById("building-type");
+  const headers = document.querySelectorAll(".card-header-step");
 
-  // remove previous colors
-  headers.forEach(h => {
-    h.classList.remove("header-residential", "header-commercial", "header-industrial");
+  buildingSelect.addEventListener("change", function() {
+    const type = this.value; // "residential", "commercial", "industrial"
+    
+    let bgColor = "";
+    if (type === "residential") bgColor = "#cce0f5"; // light blue
+    else if (type === "commercial") bgColor = "#f5cccc"; // light red
+    else if (type === "industrial") bgColor = "#d9d9d9"; // medium-light gray
+
+    // Apply background color directly
+    headers.forEach(h => {
+      h.style.backgroundColor = bgColor;
+    });
   });
-
-  // add new color
-  if (type === "residential") {
-    headers.forEach(h => h.classList.add("header-residential"));
-  } else if (type === "commercial") {
-    headers.forEach(h => h.classList.add("header-commercial"));
-  } else if (type === "industrial") {
-    headers.forEach(h => h.classList.add("header-industrial"));
-  }
 });

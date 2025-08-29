@@ -106,16 +106,23 @@ h1, h2, h3, h4, h5, h6 {
 #team cite,
 #team span {
   color: white; /* makes sure all text inside stays white */
+/* Ensure subtle, slightly darker colors than default */
+.card-header-step {
+  transition: background-color 0.3s ease; /* smooth fade */
+  color: #000; /* optional: ensures text is readable */
 }
-/* put this in your external CSS file */
-.header-residential {
-  color: #0a65a0; /* blue */
+
+/* Specific building type backgrounds */
+.card-header-step.header-residential {
+  background-color: #cce0f5 !important; /* light blue */
 }
-.header-commercial {
-  color: #aa4545; /* deep red */
+
+.card-header-step.header-commercial {
+  background-color: #f5cccc !important; /* light red */
 }
-.header-industrial {
-  color: #228b22; /* green */
+
+.card-header-step.header-industrial {
+  background-color: #d9d9d9 !important; /* medium-light gray */
 }
 
 
