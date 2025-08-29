@@ -107,6 +107,17 @@ h1, h2, h3, h4, h5, h6 {
 #team span {
   color: white; /* makes sure all text inside stays white */
 }
+/* put this in your external CSS file */
+.header-residential {
+  color: #0a65a0; /* blue */
+}
+.header-commercial {
+  color: #aa4545; /* deep red */
+}
+.header-industrial {
+  color: #228b22; /* green */
+}
+
 
 
 button::-moz-focus-inner,

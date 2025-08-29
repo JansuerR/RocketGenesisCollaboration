@@ -221,3 +221,21 @@ buildingType_select.addEventListener("change", function () {
         });
     }
 });
+document.getElementById("building-type").addEventListener("change", function() {
+  let type = this.value; // residential, commercial, industrial
+  let headers = document.querySelectorAll(".step-header");
+
+  // remove previous colors
+  headers.forEach(h => {
+    h.classList.remove("header-residential", "header-commercial", "header-industrial");
+  });
+
+  // add new color
+  if (type === "residential") {
+    headers.forEach(h => h.classList.add("header-residential"));
+  } else if (type === "commercial") {
+    headers.forEach(h => h.classList.add("header-commercial"));
+  } else if (type === "industrial") {
+    headers.forEach(h => h.classList.add("header-industrial"));
+  }
+});
