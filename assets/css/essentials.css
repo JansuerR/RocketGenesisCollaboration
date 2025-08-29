@@ -75,6 +75,40 @@
 
 /**	01. Resets
 *************************************************** **/
+.roboto-slab-regular {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* normal */
+  font-style: normal;
+}
+
+.roboto-slab-bold {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  color: #0a65a0 !important;
+}
+.Color-Blue {
+  color: #0a65a0 !important; /* will override normal rules */
+}
+#team {
+  background-color: #0a65a0 !important; /* your brand blue */
+  color: white;             /* text readable on blue */
+  padding: 40px 0;          /* adds spacing inside */
+}
+
+#team h4,
+#team cite,
+#team span {
+  color: white; /* makes sure all text inside stays white */
+}
+
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
@@ -92,17 +126,17 @@ input::-moz-focus-inner {
 ::selection {
     color: #fff;
     text-shadow: none;
-    background: #333;
+    background: #0a65a0;
 }
 ::-moz-selection {
     color: #fff;
     text-shadow: none;
-    background: #333; /* Firefox */
+    background: #0a65a0; /* Firefox */
 }
 ::-webkit-selection {
     color: #fff;
     text-shadow: none;
-    background: #333; /* Safari */
+    background: #0a65a0; /* Safari */
 }
 
 button {
@@ -3690,7 +3724,7 @@ section.dark .progress {
 
 .dropcap.color:first-letter {
     color: #fff;
-    background: #333;
+    background: #0a65a0;
     margin-top: 8px;
     padding: 0 8px 3px 4px;
 
@@ -21844,7 +21878,7 @@ section.dark .time_pick .next {
 section.dark .time_pick .timepicker_wrap {
     color: #eee;
     background: #212121;
-    background: #333;
+    background: #0a65a0;
     border-color: #666;
 }
 .time_pick .arrow_top {
@@ -24216,7 +24250,7 @@ html[xmlns] .flexslider .slides {
     border-radius: 20px;
 }
 .flex-control-paging li a:hover {
-    background: #333;
+    background: #0a65a0;
     background: rgba(0, 0, 0, 0.7);
 }
 .flex-control-paging li a.flex-active {
@@ -25276,7 +25310,7 @@ section.dark select > optgroup {
 --------------------------------------------------------------- */
 .switch > input:checked + .switch-label {
     border-color: #333;
-    background: #333;
+    background: #0a65a0;
     padding-left: 33px;
     color: white;
 }

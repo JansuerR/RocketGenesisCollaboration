@@ -9,7 +9,11 @@
 	::-webkit-selection {
 		background: #A94545; /* Safari */
 	}
-
+    .red-number {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em; /* 1.5x bigger than the surrounding text */
+    }
 
 	a,
 	a:focus:not(.btn),
@@ -281,7 +285,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .sidebar-nav .navbar li:hover>a {
 *************************************************** **/
 section.dark .btn-default:hover {
 	color: #A94545;
-	background-color:rgba(0,0,0,0.3);
+	background-color:rgba(0, 0, 0, 0.3);
 }
 
 
