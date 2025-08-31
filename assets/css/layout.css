@@ -9100,11 +9100,24 @@ section.dark-2.alternate {
 }
 
 #footer > .copyright {
-    background-color: rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #0a65a0;   /* brand blue */
+    color: white;                /* text readable */
+    text-shadow: none;           /* optional cleanup */
     padding: 25px 0;
     font-size: 13px;
     display: block;
+}
+
+/* Footer links */
+#footer > .copyright a {
+    color: white;                 /* default link color */
+    text-decoration: none;        /* remove underline */
+    transition: color 0.3s ease;  /* smooth hover effect */
+}
+
+#footer > .copyright a:hover {
+    color: #79b6e2; /* lighter blue on hover for contrast */
+    text-decoration: underline;   /* optional */
 }
 #footer > .copyright:after,
 #footer > .copyright:before {
