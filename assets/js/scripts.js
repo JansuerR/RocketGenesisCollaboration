@@ -163,6 +163,64 @@
 
 	}
 
+    "use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tbody = document.getElementById("agents-body");
+  const regionFilter = document.getElementById("regionFilter");
+  let agents = [];
+  let filteredAgents = [];
+
+  // Fetch agents
+  fetch("http://99.79.77.144:3000/api/agents")
+    .then(res => res.json())
+    .then(data => {
+      // Only agents with rating <= 95
+      agents = data.filter(agent => Number(agent.rating) <= 95);
+      filteredAgents = [...agents];
+      renderTable(filteredAgents);
+    })
+    .catch(err => {
+      console.error("Error loading agents:", err);
+      tbody.innerHTML = `<tr><td colspan="6" class="text-danger">Unable to load agents</td></tr>`;
+    });
+
+  // Render table
+  function renderTable(list) {
+    if (list.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">No agents match this filter.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = list.map(agent => `
+      <tr>
+        <td>${agent.first_name}</td>
+        <td>${agent.last_name}</td>
+        <td><a href="mailto:${agent.email}">${agent.email}</a></td>
+        <td>${agent.region}</td>
+        <td><span class="fw-bold text-primary">${agent.rating}%</span></td>
+        <td>$${agent.fee}</td>
+      </tr>
+    `).join("");
+  }
+
+  // Sort by column (first or last name)
+  document.querySelectorAll("#agents-table th[data-sort]").forEach(header => {
+    header.addEventListener("click", () => {
+      const key = header.dataset.sort;
+      filteredAgents.sort((a, b) => a[key].localeCompare(b[key]));
+      renderTable(filteredAgents);
+    });
+  });
+
+  // Filter by region
+  regionFilter.addEventListener("change", () => {
+    const selected = regionFilter.value;
+    filteredAgents = (selected === "all") 
+      ? [...agents] 
+      : agents.filter(agent => agent.region.toLowerCase() === selected.toLowerCase());
+    renderTable(filteredAgents);
+  });
+});
 
 
 /** After Resize

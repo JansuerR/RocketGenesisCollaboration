@@ -387,7 +387,48 @@
 				</div>
 			</section>
 			<!-- /PARALLAX -->
+<section id="top-agents" class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">Top Rated Agents</h2>
+    <p class="text-center text-muted">Agents with a rating of 95 or below.</p>
 
+    <!-- Region Filter -->
+    <div class="text-center mb-3">
+      <label for="regionFilter" class="me-2 fw-bold">Filter by Region:</label>
+      <select id="regionFilter" class="form-select d-inline-block w-auto">
+        <option value="all">All Regions</option>
+        <option value="north">North</option>
+        <option value="south">South</option>
+        <option value="east">East</option>
+        <option value="west">West</option>
+      </select>
+    </div>
+
+    <!-- Sortable Table -->
+    <table id="agents-table" class="table table-striped table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" data-sort="first_name">First Name ⬍</th>
+          <th scope="col" data-sort="last_name">Last Name ⬍</th>
+          <th scope="col">Email</th>
+          <th scope="col">Region</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Fee</th>
+        </tr>
+      </thead>
+      <tbody id="agents-body">
+        <tr><td colspan="6" class="text-center text-muted">Loading agents...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script src="topAgentsTable.js" defer></script>
+
+<script src="topAgents.js"></script>
+<!-- Link JS file -->
+<script src="topAgents.js"></script>
+<script src="topAgents.js"></script>
 
 			<!-- TESTIMONIAL -->
 			<section id="rt-testimonial">

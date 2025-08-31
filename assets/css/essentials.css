@@ -107,6 +107,64 @@ h1, h2, h3, h4, h5, h6 {
 #team span {
   color: white; /* makes sure all text inside stays white */
 }
+.img-fluid {
+    padding: 5px !important;
+}
+/* Top Agents Section */
+#top-agents {
+  background: #f8f9fa; /* subtle gray background */
+  padding: 60px 0;
+}
+
+#top-agents .heading-title h2 {
+  color: #0a65a0; /* Rocket Elevators blue */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#top-agents .agent-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#top-agents .agent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#top-agents .agent-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #0a65a0;
+}
+/* Top Agents Table */
+#top-agents {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+#top-agents h2 {
+  color: #0a65a0;
+  font-weight: 700;
+}
+
+#agents-table thead {
+  background-color: #0a65a0;
+  color: #fff;
+}
+
+#agents-table tbody tr:hover {
+  background-color: rgba(10, 101, 160, 0.1);
+  cursor: pointer;
+}
+
+#agents-table th {
+  cursor: pointer;
+  user-select: none;
+}
+
 
 /* Ensure subtle, slightly darker colors than default */
 .card-header-step {

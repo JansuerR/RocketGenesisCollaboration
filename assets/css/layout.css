@@ -7798,6 +7798,10 @@ section.dark #portfolio h3 {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
 }
+#portfolio {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /** Isotope Portfolio 
 	 ****************** **/
